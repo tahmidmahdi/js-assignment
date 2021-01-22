@@ -7,7 +7,7 @@ function kilometerToMeter(kmValue){
     let meter = kmValue * 1000; // converting into meter
     return meter;
 }
-meterValue = kilometerToMeter(5);
+meterValue = kilometerToMeter(6);
 console.log(meterValue);
 
 
@@ -54,6 +54,37 @@ function hotelCost(days){
 let totalPrice = hotelCost(40);
 console.log(totalPrice);
 
+
+
+
+
+function megaFriend(array){
+    let temp = array.length; // defines length of the array 
+    if(array == ""){
+        return "name can not be empty"
+    }
+    else{
+        for (let i = 1; i < array.length; i++){
+            if(i == 0){
+                temp = array[i];   // taking input of 0 index 
+            }
+            else{
+                if(temp.length > array[i].length){
+                    continue;       // returning, as the value is not bigger 
+                }
+                else{
+                    temp = array[i]; // bigger one stored in temp 
+                }
+            }
+        }
+    }
+    
+    return temp;
+
+}
+let name = ['mahdi','rahat','susmoy','wahiduzzaman'];
+let getbigName = megaFriend(name);   // storing the return value 
+console.log(getbigName);
 
 
 
